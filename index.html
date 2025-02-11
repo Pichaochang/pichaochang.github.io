@@ -1,33 +1,14 @@
+<!-- Test: npx http-server -->
+
 <!DOCTYPE html>
-<html>
-<head>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.8"></script>
-  <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init()</script>
-</head>
-<body>
-  <button onclick="connectWallet()">Connect Wallet</button>
-
-  <script>
-    let connector;
-
-    // 初始化 WalletConnect
-    function initWalletConnect() {
-      connector = new WalletConnectClient({
-        bridge: "https://bridge.walletconnect.org",
-        qrcodeModal: true,
-      });
-    }
-
-    // 连接钱包
-    async function connectWallet() {
-       // 使用 WalletConnect
-       if (!connector) initWalletConnect();
-        if (!connector.connected) {
-          await connector.createSession();
-        }
-    }
-  </script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <w3m-core-button></w3m-core-button>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
