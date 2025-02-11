@@ -22,23 +22,11 @@
 
     // 连接钱包
     async function connectWallet() {
-      if (typeof window.ethereum !== "undefined") {
-        // 外部浏览器中使用 MetaMask
-        const accounts = await ethereum.request({ method: "eth_requestAccounts" });
-        console.log("MetaMask Address:", accounts[0]);
-      } else if (window.Telegram.WebApp.isVersionAtLeast("6.9")) {
-        // Telegram 内使用 TON 钱包
-        Telegram.WebApp.sendData({ method: "ton_requestWallets" });
-        window.Telegram.WebApp.onEvent("ton_wallet_selected", (event) => {
-          console.log("TON Address:", event.data.address);
-        });
-      } else {
-        // 使用 WalletConnect
-        if (!connector) initWalletConnect();
+       // 使用 WalletConnect
+       if (!connector) initWalletConnect();
         if (!connector.connected) {
           await connector.createSession();
         }
-      }
     }
   </script>
 </body>
