@@ -1,0 +1,25 @@
+{
+  "lang": "en-EN",
+  "name": "Phoenix",
+  "short_name": "",
+  "description": "",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "icons": [
+    {
+      "src": "/favicon/favicon",
+      "sizes": "192x192",
+      "type": "image/ico",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon/faviconp",
+      "sizes": "512x512",
+      "type": "image/ico",
+      "purpose": "maskable"
+    }
+  ]
+}
